@@ -1,1 +1,53 @@
 /* INI CSS */
+
+.main-title{
+    text-align: center;
+}
+
+.form-bttn-container{
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.buttons{
+    height: 32px;
+    background-color:darkseagreen;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttonr{
+    height: 32px;
+    background-color:tomato;
+    border: none;
+    border-radius: 5px;
+}
+
+form{
+    background-color: lightgoldenrodyellow;
+    padding: 11px;
+}
+
+main{  
+    display: flex;
+}
+
+aside{
+    padding : 48px;
+}
+
+.input-data{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+footer{
+    text-align: center;
+}
