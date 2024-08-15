@@ -1,53 +1,153 @@
 /* INI CSS */
 
-.main-title{
-    text-align: center;
-}
+/* ini untuk perwarnaan font pada skala hasil BMI */
+:root {
+    --underweight: orange;
+    --normal: green;
+    --overweight: lightcoral;
+    --obese: crimson;
+  }
 
-.form-bttn-container{
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-
-.buttons{
-    height: 32px;
-    background-color:darkseagreen;
-    border: none;
-    border-radius: 5px;
-}
-
-.buttonr{
-    height: 32px;
-    background-color:tomato;
-    border: none;
-    border-radius: 5px;
-}
-
-form{
-    background-color: lightgoldenrodyellow;
-    padding: 11px;
-}
-
-main{  
-    display: flex;
-}
-
-aside{
-    padding : 48px;
-}
-
-.input-data{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+/* Untuk pembuatan box */
+  * {
     box-sizing: border-box;
-    font-family: monospace;
-    font-size: 14px;
-}
-
-footer{
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 10px;
+  }
+  
+/* Untuk memberi warna pada background*/
+  body {
+    background:#4187a3d6;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+/* Untuk membuat title di tengah */
+  h1 {
     text-align: center;
-}
+  }
+
+/* Untuk membuat paragraf menjadi align di center 
+    dan menambahkan margin untuk keestetikannya */
+  .perkenalan {
+    text-align: -webkit-center;
+    margin-bottom: 30px;
+  }
+
+/* Untuk menstyling input gender */
+  .gender-font{
+    margin-right: 50px;
+  }
+
+/* Untuk menstyling box yang sudah dibuat */
+  .container {
+    width: 100%;
+    max-width: 420px;
+    background: #f1f8fe;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    display: grid;
+    gap: 1rem;
+  }
+
+/* untuk mengatur dan menstyling form untuk menginput data */
+  .calculator {
+    display: grid;
+    gap: 1rem;
+  }
+  
+/* untuk menstyling dan memposisikan gender, age, height, and weight */
+  .calculator div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .calculator label {
+    flex: 0 1 120px;
+    font-weight: 600;
+  }
+  
+  .calculator input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    outline-color: #555;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+/* untuk menstyling button submit dan reset */
+  .calculator button {
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background: darkseagreen;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .calculator button[type="reset"] {
+    background: tomato;
+  }
+  
+  .calculator button:hover {
+    filter: brightness(120%);
+  }
+  
+/* untuk menstyling output*/
+  .output {
+    text-align: center;
+  }
+  
+  .output #bmi {
+    font-size: 4rem;
+  }
+  
+  .output #desc strong {
+    text-transform: uppercase;
+  }
+  
+
+/* untuk menstyling skala bmi */
+  .bmi-scale {
+    display: flex;
+  }
+  
+  .bmi-scale div {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 5px solid var(--color);
+    padding: 10px;
+  }
+  
+  .bmi-scale h4 {
+    font-size: 0.75rem;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* untuk menstyling warna perskala */
+  .underweight {
+    color: var(--underweight);
+  }
+  
+  .healthy {
+    color: var(--normal);
+  }
+  
+  .overweight {
+    color: var(--overweight);
+  }
+  
+  .obese {
+    color: var(--obese);
+  }

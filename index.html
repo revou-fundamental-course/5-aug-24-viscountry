@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <!-- INI HTML -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
-</head>
-<body>
-        <header>
-            <h1 class="main-title">Kalkulator BMI</h1>
-        </header>
-        <main>
-            <aside>
-                <article>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </article>
+<title>BMI Calculator</title>
 
-                <form>
-                <div>
-                    <h2>Jenis Kelamin</h2>
-                    <input type="radio" id="Pria" name="jenis-kelamin" value="Pria">
-                    <label for="Pria">Pria</label>
-                    <input type="radio" id="Wanita" name="jenis-kelamin" value="Wanita">
-                    <label for="Wanita">Wanita</label>
-                </div>
+<!-- Link ke file CSS dan file JavaScript -->
+    <link rel="stylesheet" href="css\styles.css" />
+    <script src="js\script.js" defer></script>
+  </head>
+  <body>
 
-                <div class="input-data">
-                    <h3>Berat Badan (kg)</h3>
-                    <input type="number">
-                    <h3>Usia (tahun)</h3>
-                    <input type="number">
-                    <h3>Tinggi Badan (cm)</h3>
-                    <input type="number">
-                </div>
+<!-- Title pada website dan class untuk mempercantik di css -->
+    <div class="container">
+      <h1>BMI Calculator</h1>
 
-<!-- Two diffrent class for two diffrent colors-->
-                <div class="form-bttn-container">
-                    <Button class="buttons">Submit</Button>
-                    <Button class="buttonr">Reset</Button>
-                </div>
-                </form>
+<!-- Kalimat untuk menarik perhatian user -->
+      <article>
+        <p class="perkenalan">Ready to know your BMI and ideal weight range? 
+            <br>Ayo isi data diri kamu untuk hasil akurat. Ingat, berat badan yang ideal penting untuk kesehatan kamu!</p>
 
-                <article>
-                <header>
-                    <h2>Form Information</h2>
-                </header>
-                <p>
+<!-- Form untuk menginput data-data yang diperlukan -->
+      <form class="calculator">
 
+<!-- Form untuk menginput gender (Man or Woman) -->
+        <div>
+            <h4 class="gender-font">Gender</h4>
 
-                </p>
-                </article>
-            </aside>
-            
-            <aside>            
-                <section>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </section>
-            </aside>
-        </main>
+            <input type="radio" id="Age" name="gender" value="Man" >
+            <label for="Pria">Man</label>
 
-        <footer>
-            <p>Made By Onve</p>
-        </footer>
-</body>
+            <input type="radio" id="Female" name="gender" value="Woman">
+            <label for="Wanita">Woman</label>
+        </div>
+
+<!-- Form untuk menginput age (usia) -->
+        <div>
+            <label for="age">Age (year)</label>
+            <input type="number" id="age" min="0" step="0.01" value="0"/>
+          </div>
+
+<!-- Form untuk menginput weight (berat badan) -->
+        <div>
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" min="0" step="0.01" value="0"/>
+        </div>
+
+<!-- Form untuk menginput height (berat badan) -->
+        <div>
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" min="0" step="0.01" value="0"/>
+        </div>
+
+<!-- Untuk membuat button reset dan submit -->
+        <div>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+<!-- Untuk menunjukkan hasil BMI (result) -->
+      <section class="output">
+        <h3>Hasil BMI kamu adalah...</h3>
+        <p id="bmi">0</p>
+        <p id="desc"></p>
+      </section>
+
+<!-- Section ini untuk menjelaskan skala hasil dalam kalkulator BMI -->
+      <section class="bmi-scale">
+
+<!-- Skala pada underweight (kekurangan berat badan) -->
+        <div style="--color: var(--underweight)">
+          <h4>Underweight</h4>
+          <p>&lt; 18.5</p>
+        </div>
+
+<!-- Skala pada berat badan normal (ideal) -->
+        <div style="--color: var(--normal)">
+          <h4>Normal</h4>
+          <p>18.5 – 25</p>
+        </div>
+
+<!-- Skala pada berat badan overweight (kelebihan berat badan) -->
+        <div style="--color: var(--overweight)">
+          <h4>Overweight</h4>
+          <p>25 – 30</p>
+        </div>
+
+<!-- Skala pada berat badan obese (Kegemukan) -->
+        <div style="--color: var(--obese)">
+          <h4>Obese</h4>
+          <p>≥ 30</p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+        <p>Made By Evelyn A. L.</p>
+    </footer>
+
+  </body>
 </html>
